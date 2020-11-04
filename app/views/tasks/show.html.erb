@@ -1,0 +1,17 @@
+<h2><%= @task.title %></h2>
+<p>
+  <strong>Completed: </strong>
+<%= @task.completed ? 'done' : 'not done' %></p>
+<p>
+  <strong>Details:</strong>
+  <%= @task.details %>
+</p>
+<p>
+  <%= link_to 'edit task', tasks_edit_path %>
+</p>
+<p>
+  <%= link_to 'delete task', task_destroy_path(@task.id), method: :delete %>
+</p>
+<p>
+  <%= link_to 'back to tasks list', tasks_path %>
+</p>
